@@ -1,0 +1,317 @@
+@font-face {
+    font-family: 'Retrock-Rppv';
+    src: url('Retrock-RppvW.ttf') format('truetype');
+  }
+
+  * {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Retrock-Rppv';
+    font-weight: 100;
+  }
+
+  html, body {
+    overflow-x:hidden 
+  } 
+
+  /* ------Header---------- */
+.logo-properties{
+    height: 70px;
+    width: 90px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    font-size: 2.5rem;
+    background-color: white;
+    position: fixed;
+    width:100%
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a{
+    padding-left: 5rem;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links li a:hover { 
+    color: grey;  
+}
+
+nav a img:hover { 
+    opacity:0.7;  
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    margin-left: -100px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:768px) {
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 30vh;
+        top: 8vh;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        margin-top: 40px;
+    }
+    .burger {
+        display: block;
+    }
+    .header-img{
+        display: none;
+    }
+    #about{
+        margin-top: -500px;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.header-images{
+    display: flex;
+    padding-top: 10%;
+    height:90vh
+}
+
+.header-img{
+    width:50%;
+}
+
+
+   /* ------End of Header---------- */
+
+   /* --------------- About Section ---------------*/
+.title-text{
+    text-align: center;
+    font-size: 4rem;
+    color: black;
+}
+
+.title-underline{
+    background-image: url('images/TartanBackground.png');
+    height: 5vh;
+    width: 100%;
+}
+
+#about{
+    padding:10%;
+}
+
+.about-subtitle{
+    color: black;
+    font-size: 3rem;
+}
+
+.about-info{
+    margin-top: 5px;
+    font-size: 2.5rem;
+}
+
+.review{
+    margin-top: 5px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+
+/* --------------- End of About Section ---------------*/
+
+/*--------------------- Menu Section -----------------*/
+#menu{
+    padding:10%;
+    align-items: center;
+}
+
+.food-container{
+    max-width:90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.food-card{
+    margin: 20px 0;
+    overflow: hidden;
+    padding: 7px;
+}
+
+.food-img{
+    height: 45vh;
+    width: 55vh;
+    border-radius: 10px;
+}
+
+.food-card:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.img-text{
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Menu Page */
+.main-screen-button{
+    font-size: 3rem;
+    color: black;
+}
+
+.main-screen-button:hover{
+    color: grey;
+}
+
+.menu-cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-img{
+    align-items: center;
+    width:50%;
+}
+
+/*--------------------- End of Menu Section -----------------*/
+
+/*--------------------- Entertainment -----------------*/
+
+#entertainment {
+    padding:10%;
+    align-items: center;
+}
+
+.entertainment-img {
+    height: 400px;
+    width: 600px;
+}
+
+.carousel-container {
+    width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+@media screen and (max-width:768px) {
+    .entertainment-img{
+        height: 250px;
+        width: 300px;
+    }
+    .carousel-container{
+        height: 250px;
+        width: 300px;
+    }
+    .buttons{
+        margin-left: -100px;
+    }
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 5px;
+}
+
+#prevBtn {
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+#prevBtn:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#nextBtn {
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+#nextBtn:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/*--------------------- End of Entertainment Section -----------------*/
+
+/*---------------- Contact -------------------------*/
+#contact {
+    padding:10%;
+    align-items: center;
+}
+
+.map {
+    display: block;
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .map{
+        width: 400px;
+    }
+}
+
+.phone {
+    font-family: 'sans-serif';
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*---------------- End of Contact Section -------------------------*/
+
+/* ----------footer ------------------- */
+
+.footer {
+    font-family: 'sans-serif';
+    text-align: center;
+}
